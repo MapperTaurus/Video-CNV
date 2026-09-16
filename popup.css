@@ -1,0 +1,58 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 260px;
+  font: 13px/1.4 system-ui, sans-serif;
+  color: #f4f4f5;
+  background: #18181b;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+
+#status {
+  margin: 0;
+  color: #a1a1aa;
+}
+
+#url {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #27272a;
+  color: #e4e4e7;
+  word-break: break-all;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: #dc2626;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b91c1c;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: #3f3f46;
+  color: #a1a1aa;
+}

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Video CNV",
+  "version": "1.1.0",
+  "description": "Opens CnvMP3 with the current video URL already filled in. Does not change the site you are watching.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open this video in CnvMP3",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://cnvmp3.com/*",
+    "https://www.cnvmp3.com/*"
+  ]
+}
