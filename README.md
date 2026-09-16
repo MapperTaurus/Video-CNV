@@ -1,6 +1,6 @@
 # ![Video CNV Logo](icons/icon48.png "Video CNV Logo") Video CNV
 
-A lightweight Chromium extension **or** Tampermonkey userscript that opens [CnvMP3](https://cnvmp3.com/) with the **current video URL already filled in**.
+A lightweight Chromium extension **and** Tampermonkey userscript that opens [CnvMP3](https://cnvmp3.com/) with the **current video URL already filled in**.
 
 It does **not** change the layout on the video page itself.
 
