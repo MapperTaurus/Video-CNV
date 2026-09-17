@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Video CNV
 // @namespace    https://github.com/MapperTaurus/Video-CNV
-// @version      1.2.1
+// @version      1.2.2
 // @description  Opens CnvMP3 with the current video URL already filled in. Does not change the site you are watching.
 // @author       Taurus#
 // @homepage     https://github.com/MapperTaurus/Video-CNV
-// @downloadURL  https://github.com/MapperTaurus/Video-CNV/raw/main/VideoCNV.user.js
-// @updateURL    https://github.com/MapperTaurus/Video-CNV/raw/main/VideoCNV.user.js
-// @license      https://github.com/MapperTaurus/Video-CNV/blob/main/LICENSE
+// @downloadURL  https://github.com/MapperTaurus/Video-CNV/raw/master/VideoCNV.user.js
+// @updateURL    https://github.com/MapperTaurus/Video-CNV/raw/master/VideoCNV.user.js
+// @license      https://github.com/MapperTaurus/Video-CNV/blob/master/LICENSE
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB70lEQVR42u2asWrCQBjHncTFzcXFRSJO3foEbvoCxVcQHO0TuBRcOwmuLuYR3DspCF3qEKFgoQVTKdgW8av/gNK0Sc5czsud3ME3Jffd/5dc/hfuu0wmpF3lcte3hcKdXSo9TMpl98mydvNKhc4dGAfjYVyMDx2ZOK2czVbvi0VbhthTA3qgiym+kc/fPFrWp0riDwFd0BcpXkXhfyMQAq9H1Scf9Cb+TSfV5vwp34TPbXQSf4ijO8GqdASAbg8AfqsjAHR7AFg0dASAbg9A9Ar70unQa7cbGLgmcsX2AEQ/ma/5nMIarhkAA2AADIABMAAGIAnAotGIDBYAq//ZAda2TZvZLDRYAFF9kVvKFNpMp7R1XRLVkAs5pX4D2/VaHMA+l/yPuFqlVb+fWDxyIFcqLrSo1+l9NOIWj77IkaqNLlst+hiPY4tHH/RVYh146/VoM5mcLB73oo9SCxks8NtxmOJxTxy7lLoSs+yVxy6l/0pE2SuPXUoHCLNXXruUDxBgr0nsMhWA3/aa1C5TAzjYa1K7ZALIqn2dDUD7vVGe3ellu71zh0MSGfucfLvTPPWB1WBAohtyctUHeCo0KgD46sdxa2RpA/hqZDxVSqdWo+dmU2ggJ3eVUvs68UVU6i/irATrtIqsSHRaRbf2A5DRJovls/d/AAAAAElFTkSuQmCC
 // @match        https://www.youtube.com/*
 // @match        https://youtube.com/*
@@ -216,10 +216,10 @@
         GM_openInTab(target.href, { active: true });
     }
 
-    // Register menu commands (shown when you click Tampermonkey on a matching page)
+    // Register menu commands (Tampermonkey, Violentmonkey, Greasemonkey)
     GM_registerMenuCommand('🎬 Open in CnvMP3', openConverter);
     GM_registerMenuCommand('❤️ Like This Script?', () => {
-        window.open('https://github.com/MapperTaurus/Video-CNV?tab=readme-ov-file#-like-this-extension', '_blank');
+        GM_openInTab('https://github.com/MapperTaurus/Video-CNV/blob/master/README.md#-like-this-extension', { active: true });
     });
 
     if (!isConverterPage()) return;

@@ -1,6 +1,6 @@
 # ![Video CNV Logo](icons/icon48.png "Video CNV Logo") Video CNV
 
-A lightweight Chromium extension **and** Tampermonkey userscript that opens [CnvMP3](https://cnvmp3.com/) with the **current video URL already filled in**.
+A lightweight browser extension **or** userscript that opens [CnvMP3](https://cnvmp3.com/) with the **current video URL already filled in**.
 
 It does **not** change the layout on the video page itself.
 
@@ -10,7 +10,7 @@ It does **not** change the layout on the video page itself.
 
 ### 🎬 One-click converter
 
-- While watching a supported video, click the **Video CNV** toolbar icon (extension) or Tampermonkey’s **🎬 Open in CnvMP3** menu command (userscript)
+- While watching a supported video, click the **Video CNV** toolbar icon (extension) or **🎬 Open in CnvMP3** in your userscript manager (userscript)
 - Opens [cnvmp3.com](https://cnvmp3.com/v55) with the video URL already in the converter field
 - You choose MP3 / MP4, quality, and click **Convert** on CnvMP3
 
@@ -30,7 +30,7 @@ Works on pages that [CnvMP3](https://cnvmp3.com/) can convert:
 
 - Does not inject buttons, banners, or extra UI into the site you are watching
 - The extension only needs access to the current tab and CnvMP3
-- The userscript only runs on the supported sites listed above, plus CnvMP3. Commands appear in the Tampermonkey menu
+- The userscript only runs on the supported sites listed above, plus CnvMP3. Commands appear in the Tampermonkey, Violentmonkey, or Greasemonkey menu
 
 ---
 
@@ -38,10 +38,12 @@ Works on pages that [CnvMP3](https://cnvmp3.com/) can convert:
 
 Choose **one** of the two routes below. Both work the same way — you do not need both.
 
-### Option 1 — Chromium extension
+### Option 1 — Browser extension
+
+For Chrome, Edge, Brave, and other Chromium browsers:
 
 1. Download or clone this repository.
-2. Open `chrome://extensions` (or your Chromium browser’s extensions page).
+2. Open `chrome://extensions` (or `edge://extensions`).
 3. Turn on **Developer mode**.
 4. Click **Load unpacked** and select this folder (the one that contains `manifest.json`).
 5. Pin **Video CNV** if you want the toolbar icon always visible.
@@ -50,9 +52,9 @@ You can also unzip [`dist/Video-CNV.zip`](dist/Video-CNV.zip) and load that unpa
 
 ---
 
-### Option 2 — Tampermonkey userscript
+### Option 2 — Userscript
 
-This route needs a userscript manager (not the Chromium extension above):
+This route needs a userscript manager (not the browser extension above):
 
 [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.tampermonkey.net/)   [![Greasemonkey](https://img.shields.io/badge/Greasemonkey-FBAC00?style=for-the-badge&logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)   [![Violentmonkey](https://img.shields.io/badge/Violentmonkey-c37731?style=for-the-badge&logo=vivaldi&logoColor=white)](https://violentmonkey.github.io/get-it/)
 
@@ -60,11 +62,11 @@ This route needs a userscript manager (not the Chromium extension above):
 
 Click below to install the script directly:
 
-[![Install from GitHub](https://img.shields.io/badge/Install%20from-GitHub-24292E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MapperTaurus/Video-CNV/raw/main/VideoCNV.user.js)
+[![Install from GitHub](https://img.shields.io/badge/Install%20from-GitHub-24292E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MapperTaurus/Video-CNV/raw/refs/heads/master/VideoCNV.user.js)
 
 > Make sure one of the userscript managers above is installed and enabled in your browser.
 
-You can also open `VideoCNV.user.js` from this repository and Tampermonkey / Violentmonkey will offer to install it.
+You can also open `VideoCNV.user.js` from this repository and your userscript manager will offer to install it.
 
 ---
 
@@ -80,22 +82,22 @@ You can also open `VideoCNV.user.js` from this repository and Tampermonkey / Vio
 ### Userscript
 
 1. Open a supported video (for example a YouTube watch page).
-2. Click the **Tampermonkey** icon in the toolbar — not the Tampermonkey dashboard.
-3. Click **Video CNV**. Tampermonkey opens the script’s function list.
+2. Click your **userscript manager** icon in the toolbar (Tampermonkey, Violentmonkey, or Greasemonkey) — not its dashboard.
+3. Click **Video CNV**. The manager opens the script’s function list.
 4. Click **🎬 Open in CnvMP3**.
 5. A CnvMP3 tab opens with that URL already in the input field.
 6. Choose format / quality and click **Convert**.
 
-The function list only appears while you are on a matching site (YouTube, TikTok, Reddit, Instagram, Facebook, Twitch, X, or CnvMP3). On Tampermonkey’s own dashboard you will only see enable / disable.
+The function list only appears while you are on a matching site (YouTube, TikTok, Reddit, Instagram, Facebook, Twitch, X, or CnvMP3). On the manager’s own dashboard you will only see enable / disable.
 
-Reinstall or refresh `VideoCNV.user.js` so version **1.2.1** is active. Neither version changes the original site.
+Reinstall or refresh `VideoCNV.user.js` so version **1.2.2** is active. Neither version changes the original site.
 
 ---
 
 ## ❓ FAQ
 
 **Q: Does this add a download button on YouTube (or TikTok, etc.)?**  
-No. It never changes those sites. The extension uses its toolbar icon. The userscript uses Tampermonkey’s menu (`🎬 Open in CnvMP3`), like other scripts’ settings commands.
+No. It never changes those sites. The extension uses its toolbar icon. The userscript uses your manager’s menu (`🎬 Open in CnvMP3`), like other scripts’ settings commands.
 
 **Q: What if I'm not on a video page?**  
 The extension popup says **No video found**. The userscript shows a short alert. Open a real video / reel / clip first.
