@@ -219,7 +219,7 @@
     // Register menu commands (Tampermonkey, Violentmonkey, Greasemonkey)
     GM_registerMenuCommand('🎬 Open in CnvMP3', openConverter);
     GM_registerMenuCommand('❤️ Like This Script?', () => {
-        GM_openInTab('https://github.com/MapperTaurus/Video-CNV/blob/master/README.md#-like-this-extension', { active: true });
+        GM_openInTab('https://github.com/MapperTaurus/Video-CNV#-like-this-extension', { active: true });
     });
 
     if (!isConverterPage()) return;
